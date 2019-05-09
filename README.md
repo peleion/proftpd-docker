@@ -11,7 +11,7 @@ Modifications in this container:
 * Timezone set to localtime
 
 Notes for use:
-* Ports 6000-6010 are opened (arbitrary) for active FTP connections - you may want more or different ports. This is sufficient for a low-volume server
+* Ports 6000-6010 are opened (arbitrary) for passive FTP connections - you may want more or different ports. This is sufficient for a low-volume server
 * Self-signed TLS certificates are generated and added to the config directory for SFTP use
 * I have not figured out a straightforward way for multiple user/password persistence - you will need to perform something like this each time a new ProFTPD container is created:
 ```
