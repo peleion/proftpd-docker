@@ -1,0 +1,19 @@
+# docker-compose.yml for ProFTPD
+
+version: '3'
+services:
+  proftpd:
+    image: <your image name>
+    container_name: proftpd
+    ports:
+        - "21:21/tcp"
+        - "6000-6010:6000-6010/tcp"
+    volumes:
+      - config:/etc/proftpd:z
+      - data:/var/ftp:z
+      - logs:/var/log/proftpd:z
+    restart: on-failure
+volumes:
+  config:
+  data:
+  logs:
